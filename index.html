@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <title>스노우스 코리아</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        html,body {
+            height: 100%;
+            font-size: 1em;
+        }
+        #wrapper {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            overflow: hidden;
+            /* border: 1px solid black; */
+            
+        }
+        header {
+            width: 100%;
+            height: 30px;
+            background: black;
+            font-family: "나눔고딕";
+            font-weight: 600;
+            color: white;
+            
+        }
+
+        .cls001 {
+            margin-left: 250px;
+        }
+
+        .container {
+            background: #eee;
+            height: auto;
+            width: 100%;
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .container a {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #MENU1 {
+            position: absolute;
+            left: 50%;
+            list-style: none;
+            transform: translate(-50%, 0);
+        }
+
+        #MENU1 span {
+            font-family: "나눔고딕";
+            font-weight: 500;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        #MENU2 li a {
+            display: block;
+            float: left;
+        }
+        
+        #MENU2 {
+            width: 30%;
+            float: right;
+            list-style: none;
+        }
+
+        #MENU2 span {
+            font-family: "나눔고딕";
+            font-weight: 500;
+            color: #666;
+            margin: 5px;
+            font-size: 13px;
+        }
+
+        .logo {
+            height: auto;
+            /* margin-left: 200px; */
+            padding: 0px;
+            /* width: 35%; */
+            float: left;
+            width: 25%;
+            padding-left: 15% ;
+        }
+
+        
+
+        .mainbar-left {
+            width: 50%;
+            margin-top:40px;
+            padding: 0;
+            float: left
+        }
+
+        .mainbar-left a {
+            text-decoration: none;
+        }
+
+        .mainbar-left span {
+            font-family: "나눔고딕";
+            font-weight: 400;
+            color: black;
+            font-size: 13px;
+            margin: 10px;
+        }
+
+        .sale span {
+            font-family: "나눔고딕";
+            font-weight: 700;
+            color: black;
+        }
+
+        .explore span {
+            font-family: "나눔고딕";
+            font-weight: 700;
+            color: black;
+        }
+
+        .mainbar-right {
+            width: 25%;
+            height: 65px;
+            line-height: 65px;
+            margin: 0;
+            padding: 0;
+            float: right;
+            /* display: block; */
+            margin-top: 20px;
+        }
+
+        #bar2 a {
+            margin: 30px;
+            color: black;
+            font-size: 20px;
+        }
+
+        section {
+            clear: both;
+            width: 100vw;
+            
+            /* height: 700px; */
+            /* float: left; */
+        }
+
+        .snowboard1 {
+
+            width: 50%;
+            height: 50vh;
+            margin-top: 20px;
+            float: left;
+            background: url("images/snowboard3.jfif");
+            background-size: cover;
+            /* position: relative;
+            z-index: 22; */
+            position: relative;
+
+        }
+            
+
+        .snowboard2 {
+            width: 50%;
+            height: 50vh;
+            margin-top: 20px;
+            float: right;
+            background: url("images/snowboard4.jfif");
+            background-size: cover;
+            position: relative;
+            /* z-index: 33; */
+            /* float: right; */
+        }
+
+        .box1 {
+            width: 150px;
+            height: 40px;
+            position: absolute;
+            top:300px;
+            right: 3px;
+            background: white;
+            transition: 0.7s;
+        }
+
+        .box1 p {
+            font-size: 15px;
+            font-family: "나눔고딕";
+            font-weight: 500;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 40px;
+            position: absolute;
+            top:300px;
+            left: 3px;
+            background: white;
+        }
+
+        .box2 p {
+            font-size: 15px;
+            font-family: "나눔고딕";
+            font-weight: 500;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .box1:hover {
+            background: black;
+        }
+
+        .box1:hover p {
+            color: white;
+        }
+
+        .box2:hover {
+            background: black;
+        }
+
+        .box2:hover p {
+            color: white;
+        }
+
+        .maintext {
+            position: absolute;
+            top: 100px;
+            right: -150px;
+        }
+
+
+
+        /*
+        #left {
+            width: 20%;
+            height: 350px;
+            background: red;
+            margin-top: 20px;
+            margin-right: 5%;
+            float: left;
+        }
+
+        #center {
+            width: 50%;
+            height: 600px;
+            background: chartreuse;
+            float: left;
+            margin-top: 20px;
+            margin-right: 5%;
+        }
+
+        #right {
+            width: 20%;
+            height: 350px;
+            float: right;
+            background: red;
+            margin-top: 20px;
+        }
+
+        footer {
+            clear: both;
+            width: 100%;
+            height: 150px;
+            background: red;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <span class="cls001">SNOWS</span>
+        </header>
+        <div class="container">
+            <ul id="MENU1">
+                <li><a href="#"><span>스노우스 공식 온라인 스토어 혜택</span></a></li>
+            </ul>
+            <ul id="MENU2">
+                <li><a href="#"><span>로그인</span></a></li>
+                <li><a href="#"><span>회원가입</span></a></li>
+                <li><a href="#"><span>마이페이지</span></a></li>
+                <li><a href="#"><span>고객센터</span></a></li>
+                <li><a href="#"><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="logo">
+                <a href="#"><img src="images/arcteryx_logo.png" alt=""></a>
+        </div>
+        <div class="mainbar-left">
+            <ul id="bar1"></ul>
+                <a href="#"><span>남성</span></a>
+                <a href="#"><span>여성</span></a>
+                <a class="sale" href="#"><span>SALE</span></a>
+                <a class="explore" href="#"><span>EXPLORE</span></a>
+            </ul>
+        </div>
+        <div class="mainbar-right">
+            <ul id="bar2">
+                <a href=""><i class="fas fa-search"></i></a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </ul>
+        </div>
+        <section>
+            <div id="main">
+                <div class="snowboard1">
+                    <div class="box1"><p>SHOP MEN's</p></div>
+                    <div class="maintext"><img src="images/main_top_text_01.png" alt=""></div>
+                </div>
+                <div class="snowboard2">
+                    <div class="box2"><p>SHOP WOMEN's</p></div>                    
+                </div>
+                
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

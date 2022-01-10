@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형패턴 1번</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #box_a {
+            width: 100%;
+            height: 400px;
+            background: red;
+        }
+
+        #box_b {
+            float: left;
+            width: 50%;
+            height: 400px;
+            background: #8ac007;
+        }
+
+        #box_c {
+            float: right;
+            width: 50%;
+            height: 400px;
+            background: dodgerblue;
+        }
+
+        @media(max-width:1024px) {
+            #wrap {
+                width: 90%;
+            }
+        }
+
+        @media(max-width:800px) {
+            #wrap {
+                width: 100%;
+            }
+        }
+
+        @media(max-width:480px) {
+            #box_b {
+                float: none;
+                width: auto;
+            }
+            #box_c {
+                float: none;
+                width: auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box_a"></div>
+        <div id="box_b"></div>
+        <div id="box_c"></div>
+    </div>    
+</body>
+</html>

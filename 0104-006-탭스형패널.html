@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭스형 패널</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 20px;
+            padding: 20px;
+            text-align: left;
+            color: #fff;
+            background: #f1f1f1;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav ul {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 650px;
+            text-align: left;
+            list-style: none;
+        }
+
+        nav li {
+            float: left;
+            display: block;
+        }
+        
+        nav li input[type="radio"]{
+            position: absolute;
+            left: -9999px;
+        }
+
+        nav ul label {
+            display: block;
+            position: relative;
+            top: 8px;
+            padding: 12px 18px;
+            background: #ccc;
+            cursor: pointer;
+            border-radius: 6px 6px 0 0;
+            transition: 0.2s;
+        }
+
+        nav label:hover {
+            background: rgba(138,192,7,0.7);
+        }
+
+        nav .content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 53px;
+            padding: 25px;
+            width: 100%;
+            overflow: hidden;
+            background: #8ac007;
+            border-radius: 0 9px 0 0;
+        }
+
+        nav input[type="radio"]:checked + label {
+            top: 1px;
+            padding-top: 18px;
+            background: #8ac007;
+        }
+
+        nav input[type="radio"]:checked ~ .content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <input type="radio"checked name="tab" id="tab1">
+                    <label for="tab1">JAVASCRIPT</label>
+                    <div id="tab-content1" class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam porro facilis saepe, nulla assumenda quam eius rerum repellat omnis, at praesentium eum ipsum dolores tempora aperiam provident? Corrupti, voluptates repellendus.</p>
+                    </div>                
+                </li>
+                <li>
+                    <input type="radio" name="tab" id="tab2">
+                    <label for="tab2">JQuery</label>
+                    <div id="tab-content2" class="content">
+                        <p>Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Quibusdam porro facilis saepe, nulla assumenda quam eius rerum repellat omnis, at praesentium eum ipsum dolores tempora aperiam provident? Corrupti, voluptates repellendus.</p>
+                    </div> 
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

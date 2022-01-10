@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형패턴 2번</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: dodgerblue;
+        }
+
+        #container {
+            width: 320px;
+            margin: 50px auto;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            margin: 20px 10px;
+            border: 1px solid black;
+            background: #fff;
+        }
+
+        .words {
+            position: absolute;
+            left: 10px;
+            top: 300px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media(min-width:768px) {
+            #container {
+                width: 580px;
+                margin: 50px auto;
+            }
+
+            .card {
+                position: relative;
+                width: 550px;
+                height: 250px;
+                margin: 20px 10px;
+                border: 1px solid black;
+                background: #fff;
+            }
+
+            .words {
+                position: absolute;
+                left: 310px;
+                top: 50px;
+                text-align: center;
+                width: 200px;
+            }
+        }
+
+        @media(min-width:1720px) {
+            #container {
+                width: 1710px;
+                margin: 50px auto;
+            }
+
+            .card {
+                position: relative;
+                float: left;
+                width: 550px;
+                height: 250px;
+                margin: 10px;
+                border: 1px solid black;
+                background: #fff;
+            }
+
+            .words {
+                position: absolute;
+                left: 310px;
+                top: 50px;
+                text-align: center;
+                width: 200px;
+            }
+        }
+
+
+       
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="card">
+        <img src="images (2)/1.jpg" alt="">
+        <div class="words">
+            <h1>일분전 만큼 먼 시간은 없다.</h1>
+            <h2>-jim Bishop</h2>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images (2)/2.jpg" alt="">
+        <div class="words">
+            <h1>일분전 만큼 먼 시간은 없다.</h1>
+            <h2>-jim Bishop</h2>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images (2)/3.jpg" alt="">
+        <div class="words">
+            <h1>일분전 만큼 먼 시간은 없다.</h1>
+            <h2>-jim Bishop</h2>
+        </div>
+    </div>
+</div>     
+</body>
+</html>

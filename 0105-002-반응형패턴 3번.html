@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형패턴 3번</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            margin: 0 auto;
+            width: 1000px;
+        }
+       
+        #box_a {
+            float: left;
+            width: 20%;
+            height: 400px;
+            background: red;
+        }
+
+        #box_b {
+            float: left;
+            width: 80%;
+            height: 200px;
+            background: #8ac007;
+        }
+
+        #box_c {
+            float: left;
+            width: 80%;
+            height: 200px;
+            background: dodgerblue;
+        }
+
+        @media(max-width:800px) {
+            #wrap {
+                width: 90%
+            }
+        }
+
+        @media(max-width:480px) {
+            #wrap {
+                width: 100%;
+            }
+            #box_a{
+                float: none;
+                width: 100%;
+            }
+            #box_b{
+                float: none;
+                width: 100%;
+            }
+            #box_c{
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="box_a"></div>
+    <div id="box_b"></div>
+    <div id="box_c"></div>
+</div>     
+</body>
+</html>

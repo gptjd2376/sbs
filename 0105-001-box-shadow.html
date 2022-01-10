@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <title>BOX-SHADOW</title>
+    <style>
+        body {
+            margin: 40px;
+            background: #ccc;
+        }
+
+        .polaroid {
+            padding: 10px 10px 20px 10px;
+            width: 300px;
+            background: #fff;
+            border: 1px solid #333;
+            box-shadow: 10px 10px 5px #aaa;
+        }
+
+        .rotate_left {
+            float: left;
+            transform: rotate(7deg);
+        }
+
+        .rotate_right {
+            float: left;
+            transform: rotate(-8deg);
+        }
+
+        .box {
+            height: 215px;
+            border: 1px solid #666;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="polaroid rotate_left">
+        <div class="box"></div>
+        <p class="cpation">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="polaroid rotate_right">
+        <div class="box"></div>
+        <p class="cpation">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    
+</body>
+</html>

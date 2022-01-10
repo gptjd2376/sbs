@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <title>focus</title>
+    <style>
+        body {
+            background: #555;
+        }
+        form {
+            position: relative;
+        }
+        input {
+            width: 150px;
+            border-radius: 20px;
+            box-shadow: 0 1px 0 rgba(255,255,255,1) inset 0 1px 3px rgba(0,0,0,0.2);
+            background: #444;
+            transition: 0.5s;
+            padding-left: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            font-size: 12px;
+        }
+
+        input:focus {
+            background: #666;
+            width: 200px;
+        }
+
+        .cls001 {
+            position: absolute;
+            top: 8px;
+            left: 5px;
+            color: #999;
+            font-size: 12px;
+        }
+     
+    </style>
+</head>
+<body>
+    <form action="action.php">
+        <input type="text"placeholder="Custom search">
+        <i class="cls001"></i>
+    </form>
+    
+</body>
+</html>
